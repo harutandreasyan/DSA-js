@@ -37,7 +37,7 @@ Result: `[1, 3, 4, 5]`
 
 ---
 
-## Visual
+## 🎨 Visual
 
 ---
 
@@ -81,8 +81,6 @@ Result: `[1, 3, 4, 5]`
 ## 🔗 Useful Resources
 
 - [Insertion Sort on Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
-- [Insertion Sort Visualized](https://visualgo.net/en/sorting)
-- [Insertion Sort Explained (YouTube)](https://www.youtube.com/results?search_query=insertion+sort+visualization)
 
 ---
 

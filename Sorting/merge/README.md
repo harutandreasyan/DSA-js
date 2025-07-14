@@ -43,7 +43,9 @@ Output: [1, 2, 3, 5, 9]
 ```
 
 ---
-## Visual
+
+## 🎨 Visual
+
 ![Merge Sort Visualization](./images/merge-sort-1.png)
 ![Merge Sort Visualization](./images/merge-sort-2.png)
 ![Merge Sort Visualization](./images/merge-sort-3.png)
@@ -82,8 +84,6 @@ Output: [1, 2, 3, 5, 9]
 ## 🔗 Useful Resources
 
 - [Merge Sort on Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
-- [Merge Sort Visualized](https://visualgo.net/en/sorting)
-- [Merge Sort Explained (YouTube)](https://www.youtube.com/results?search_query=merge+sort+visualization)
 
 ---
 

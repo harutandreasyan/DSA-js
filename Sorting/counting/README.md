@@ -23,7 +23,6 @@ It is extremely efficient for sorting integers within a known and limited range.
 
 ---
 
-
 ## 🧠 Example
 
 ```js
@@ -49,7 +48,7 @@ Result: [2, 2, 3, 4, 8] — stable
 ## 🧠 Example Without Prefix Sum (Not Stable)
 
 ```js
-Input:  
+Input:
 [
   { id: 1, score: 3 },
   { id: 2, score: 2 },
@@ -68,7 +67,9 @@ Sort by score using Counting Sort without prefix sum:
   { id: 1, score: 3 }
 ]
 ```
+
 ## ✅ Example With Prefix Sum (Stable)
+
 ```js
 Input (same):
 [
@@ -92,9 +93,11 @@ Steps:
 
 ✅ Result is stable — elements with the same score appear in original order.
 ```
+
 ---
 
-## Visual
+## 🎨 Visual
+
 ![Counting Sort Visualization](./images/counting-sort-1.png)
 ![Counting Sort Visualization](./images/counting-sort-2.png)
 ![Counting Sort Visualization](./images/counting-sort-3.png)
@@ -112,21 +115,21 @@ Steps:
 
 ## ⏱️ Time and Space Complexity
 
-| Case         | Time Complexity | Explanation                                |
-|--------------|------------------|--------------------------------------------|
-| Best         | `O(n + k)`       | `n` is input size, `k` is range size       |
-| Average      | `O(n + k)`       | Efficient for small integer ranges         |
-| Worst        | `O(n + k)`       | Avoid if `k` is too large                  |
-| Space        | `O(k + n)`       | Uses extra arrays for counting and output  |
+| Case    | Time Complexity | Explanation                               |
+| ------- | --------------- | ----------------------------------------- |
+| Best    | `O(n + k)`      | `n` is input size, `k` is range size      |
+| Average | `O(n + k)`      | Efficient for small integer ranges        |
+| Worst   | `O(n + k)`      | Avoid if `k` is too large                 |
+| Space   | `O(k + n)`      | Uses extra arrays for counting and output |
 
 ---
 
 ## 📦 Properties
 
-- **Stable**: ✅ *only when using prefix sum logic*  
-- **In-place**: ❌ (requires output array)  
-- **Non-comparison-based** ✅  
-- **Only works on integers or discrete values** ✅  
+- **Stable**: ✅ _only when using prefix sum logic_
+- **In-place**: ❌ (requires output array)
+- **Non-comparison-based** ✅
+- **Only works on integers or discrete values** ✅
 - **Super fast for small, bounded ranges** ✅
 
 ---
@@ -152,7 +155,7 @@ Steps:
 
 ---
 
-## ❌ When *Not* to Use
+## ❌ When _Not_ to Use
 
 - For large or sparse integer ranges (e.g., 1–10⁶ with only 5 elements)
 - For floating-point numbers or general-purpose sorting
@@ -162,8 +165,6 @@ Steps:
 ## 🔗 Useful Resources
 
 - [Counting Sort on Wikipedia](https://en.wikipedia.org/wiki/Counting_sort)
-- [Counting Sort Visualized](https://visualgo.net/en/sorting)
-- [Counting Sort Explained (YouTube)](https://www.youtube.com/results?search_query=counting+sort+stable+prefix+sum)
 
 ---
 

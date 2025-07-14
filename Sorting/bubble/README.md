@@ -42,7 +42,7 @@ No swaps → array is sorted.
 
 ---
 
-## Visual
+## 🎨 Visual
 
 ![Bubble Sort Visualization](./images/bubble-sort-1.png)
 ![Bubble Sort Visualization](./images/bubble-sort-2.png)
@@ -88,8 +88,6 @@ No swaps → array is sorted.
 ## 🔗 Useful Resources
 
 - [Bubble Sort on Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
-- [Bubble Sort Visualized](https://visualgo.net/en/sorting)
-- [Bubble Sort Explained (YouTube)](https://www.youtube.com/results?search_query=bubble+sort+visualization)
 
 ---
 
