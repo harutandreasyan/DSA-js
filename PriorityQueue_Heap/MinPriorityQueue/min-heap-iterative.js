@@ -1,11 +1,3 @@
-/* Priority Queue, Heap Sort */
-
-// left child -> 2 * i + 1
-// right child -> 2 * i + 2
-// parent -> (i - 1) / 2
-
-// parent is less than children
-
 class MinHeap {
 	constructor() {
 		this.heap = []
