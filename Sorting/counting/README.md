@@ -177,4 +177,6 @@ Steps:
 
 ---
 
-👨‍💻 Check the implementation in [`counting-sort.js`](./counting-sort.js)
+👨‍💻 Check stable implementation in [`counting-sort.js`](./counting-sort.js)
+
+👨‍💻 Check not stable implementation in [`counting-sort-notStable.js`](./counting-sort-notStable.js)
