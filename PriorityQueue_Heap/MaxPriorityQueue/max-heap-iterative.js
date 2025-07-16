@@ -106,10 +106,10 @@ heap.insert(19)
 console.log(heap.printHeap()) // [ 144, 42, 61, 17, 4, 16, 19 ]
 /*
 				   (144)
-				/	   	  \
-			(42)		   (61)
-			/  \		   /  \
-        (17)   	(4)    (16)    (19)
+				/	 \
+			    (42)          (61)
+			    /  \          /  \
+                        (17)   	(4)    (16)   (19)
 */
 
 console.log(heap.extractMax()) // 144
@@ -117,10 +117,10 @@ console.log(heap.extractMax()) // 144
 console.log(heap.printHeap()) // [ 61, 42, 19, 17, 4, 16 ]
 /*
 				    (61)
-				/	   	  \
-			(42)		   (19)
-			/  \		   /  
-        (17)   	(4)    (16)    
+				 / 	  \
+			     (42)          (19)
+			     /  \          /  
+                         (17)    (4)   (16)    
 */
 
 console.log(heap.peek()) // 61
