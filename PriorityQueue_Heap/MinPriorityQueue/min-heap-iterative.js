@@ -1,11 +1,3 @@
-/* Priority Queue, Heap Sort */
-
-// left child -> 2 * i + 1
-// right child -> 2 * i + 2
-// parent -> (i - 1) / 2
-
-// parent is less than children
-
 class MinHeap {
 	constructor() {
 		this.heap = []
@@ -119,10 +111,10 @@ heap.insert(19)
 console.log(heap.printHeap()) // [ 4, 17, 16, 144, 42, 61, 19 ]
 /*
 					(4)
-				/	   	  \
-			(17)		   (16)
-			/  \		   /  \
-       (144)   	(42)   (61)    (19)
+				    /	      \
+			        (17)	       (16)
+			        /  \	       /  \
+                           (144)    (42)   (61)    (19)
 */
 
 console.log(heap.extractMin()) // 4
@@ -130,10 +122,10 @@ console.log(heap.extractMin()) // 4
 console.log(heap.printHeap()) // [ 16, 17, 19, 144, 42, 61 ]
 /*
 					(16)
-				/	   	  \
-			(17)		   (19)
-			/  \		   /  
-       (144)   	(42)   (61)    
+				    /	       \
+			        (17)		(19)
+			        /  \		/  
+                           (144)    (42)    (61)    
 */
 
 console.log(heap.peek()) // 16
