@@ -128,4 +128,5 @@ Result: [1, 3, 4, 5, 10]
 ---
 
 👨‍💻 Heap sort with Max Heap: [`heap-sort-MaxHeap.js`](./heap-sort-MaxHeap.js)
+
 👨‍💻 Heap sort with Min Heap: [`heap-sort-MinHeap.js`](./heap-sort-MinHeap.js)
