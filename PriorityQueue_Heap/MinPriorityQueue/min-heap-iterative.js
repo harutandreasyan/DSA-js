@@ -1,102 +1,102 @@
 class MinHeap {
-	constructor() {
-		this.heap = []
-		this.size = 0
-	}
+    constructor() {
+        this.heap = []
+        this.size = 0
+    }
 
-	getParentIdx(idx) {
-		return Math.floor((idx - 1) / 2)
-	}
+    getParentIdx(idx) {
+        return Math.floor((idx - 1) / 2)
+    }
 
-	getLeftChildIdx(idx) {
-		return 2 * idx + 1
-	}
+    getLeftChildIdx(idx) {
+        return 2 * idx + 1
+    }
 
-	getRightChildIdx(idx) {
-		return 2 * idx + 2
-	}
+    getRightChildIdx(idx) {
+        return 2 * idx + 2
+    }
 
-	hasParent(idx) {
-		return this.getParentIdx(idx) >= 0
-	}
+    hasParent(idx) {
+        return this.getParentIdx(idx) >= 0
+    }
 
-	hasLeftChild(idx) {
-		return this.getLeftChildIdx(idx) < this.size
-	}
+    hasLeftChild(idx) {
+        return this.getLeftChildIdx(idx) < this.size
+    }
 
-	hasRightChild(idx) {
-		return this.getRightChildIdx(idx) < this.size
-	}
+    hasRightChild(idx) {
+        return this.getRightChildIdx(idx) < this.size
+    }
 
-	parent(idx) {
-		return this.heap[this.getParentIdx(idx)]
-	}
+    parent(idx) {
+        return this.heap[this.getParentIdx(idx)]
+    }
 
-	leftChild(idx) {
-		return this.heap[this.getLeftChildIdx(idx)]
-	}
+    leftChild(idx) {
+        return this.heap[this.getLeftChildIdx(idx)]
+    }
 
-	rightChild(idx) {
-		return this.heap[this.getRightChildIdx(idx)]
-	}
+    rightChild(idx) {
+        return this.heap[this.getRightChildIdx(idx)]
+    }
 
-	swap(i, j) {
-		;[this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]]
-	}
+    swap(i, j) {
+        ;[this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]]
+    }
 
-	peek() {
-		if (this.size === 0) return null
-		return this.heap[0]
-	}
+    peek() {
+        if (this.size === 0) return null
+        return this.heap[0]
+    }
 
-	insert(data) {
-		this.heap[this.size] = data
-		this.size++
-		this.heapifyUp()
-	}
+    insert(data) {
+        this.heap[this.size] = data
+        this.size++
+        this.heapifyUp()
+    }
 
-	heapifyUp() {
-		let idx = this.size - 1
-		while (this.hasParent(idx) && this.parent(idx) > this.heap[idx]) {
-			this.swap(this.getParentIdx(idx), idx)
-			idx = this.getParentIdx(idx)
-		}
-	}
+    heapifyUp() {
+        let idx = this.size - 1
+        while (this.hasParent(idx) && this.parent(idx) > this.heap[idx]) {
+            this.swap(this.getParentIdx(idx), idx)
+            idx = this.getParentIdx(idx)
+        }
+    }
 
-	extractMin() {
-		if (this.size === 0) {
-			throw new Error('Empty Heap')
-		}
-		if (this.size === 1) {
-			return this.heap.pop()
-		}
-		this.swap(0, this.size - 1)
-		const min = this.heap.pop()
-		this.size--
-		this.heapifyDown()
-		return min
-	}
+    extractMin() {
+        if (this.size === 0) {
+            throw new Error('Empty Heap')
+        }
+        if (this.size === 1) {
+            return this.heap.pop()
+        }
+        this.swap(0, this.size - 1)
+        const min = this.heap.pop()
+        this.size--
+        this.heapifyDown()
+        return min
+    }
 
-	heapifyDown() {
-		let idx = 0
-		while (this.hasLeftChild(idx)) {
-			let smallerChildIdx = this.getLeftChildIdx(idx)
-			if (
-				this.hasRightChild(idx) &&
-				this.rightChild(idx) < this.leftChild(idx)
-			) {
-				smallerChildIdx = this.getRightChildIdx(idx)
-			}
+    heapifyDown() {
+        let idx = 0
+        while (this.hasLeftChild(idx)) {
+            let smallerChildIdx = this.getLeftChildIdx(idx)
+            if (
+                this.hasRightChild(idx) &&
+                this.rightChild(idx) < this.leftChild(idx)
+            ) {
+                smallerChildIdx = this.getRightChildIdx(idx)
+            }
 
-			if (this.heap[idx] < this.heap[smallerChildIdx]) break
-			else this.swap(idx, smallerChildIdx)
-			idx = smallerChildIdx
-		}
-	}
+            if (this.heap[idx] < this.heap[smallerChildIdx]) break
+            else this.swap(idx, smallerChildIdx)
+            idx = smallerChildIdx
+        }
+    }
 
-	printHeap() {
-		console.log(this.heap)
-	}
+    printHeap() {
+        console.log(this.heap)
+    }
 }
 
 let heap = new MinHeap()
@@ -110,10 +110,10 @@ heap.insert(19)
 
 console.log(heap.printHeap()) // [ 4, 17, 16, 144, 42, 61, 19 ]
 /*
-					(4)
-				    /	      \
-			        (17)	       (16)
-			        /  \	       /  \
+                    (4)
+                    /	      \
+                    (17)	       (16)
+                    /  \	       /  \
                            (144)    (42)   (61)    (19)
 */
 
@@ -121,10 +121,10 @@ console.log(heap.extractMin()) // 4
 
 console.log(heap.printHeap()) // [ 16, 17, 19, 144, 42, 61 ]
 /*
-					(16)
-				    /	       \
-			        (17)		(19)
-			        /  \		/  
+                    (16)
+                    /	       \
+                    (17)		(19)
+                    /  \		/  
                            (144)    (42)    (61)    
 */
 
