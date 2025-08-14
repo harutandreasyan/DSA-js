@@ -19,7 +19,7 @@ Each variant is implemented as a standalone file to compare design choices and t
 
 - **Hash function:** maps arbitrary keys (often converted to strings) to integer indices in `[0..m-1]` where `m` is the table capacity. A good hash function distributes keys uniformly.
 - **Collision:** when two different keys map to the same index. Collision resolution strategies are required.
-- **Load factor (**``**)**: `size / capacity`. Thresholds for resizing per collision strategy affect performance.
+- **Load factor**: `size / capacity`. Thresholds for resizing per collision strategy affect performance.
 - **Resize / Rehash:** when the load factor crosses a threshold, the table is resized and existing entries re-inserted with the new capacity and hash mapping.
 - **Tombstones:** in open addressing, deleted slots are often marked with a tombstone sentinel to preserve probe sequences.
 
@@ -331,10 +331,10 @@ These are the typical complexities (assuming a good hash function):
 
 > Separate chaining
 
-- [`separate-chaining/hash-table.js`](`./separate-chaining/hash-table.js`)
+- [`separate-chaining/hash-table.js`](./separate-chaining/hash-table.js)
 
 > Open addressing
 
-- [`open-addressing/linear-probing-HashTable.js`](`./open-addressing/linear-probing-HashTable.js`)
-- [`open-addressing/quadratic-probing-HashTable.js`](`./open-addressing/quadratic-probing-HashTable.js)
-- [`open-addressing/double-hashing-HashTable.js`](`./open-addressing/double-hashing-HashTable.js`)
+- [`open-addressing/linear-probing-HashTable.js`](./open-addressing/linear-probing-HashTable.js)
+- [`open-addressing/quadratic-probing-HashTable.js`](./open-addressing/quadratic-probing-HashTable.js)
+- [`open-addressing/double-hashing-HashTable.js`](./open-addressing/double-hashing-HashTable.js)
